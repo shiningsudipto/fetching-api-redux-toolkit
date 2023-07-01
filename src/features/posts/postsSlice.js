@@ -1,6 +1,7 @@
 import axios from "axios";
 
-const { createSlice, createAsyncThunk } = require("@reduxjs/toolkit");
+import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
+
 //to generate action need reducer-name/action-name
 export const fetchPosts = createAsyncThunk("posts/fetchPosts", async () => {
     const res = await axios.get('https://jsonplaceholder.typicode.com/posts');
